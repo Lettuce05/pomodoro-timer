@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/clock.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <template id="Timer">
+      <style>
+        * {
+          font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        }
+        #timerText {
+          font-weight: bold;
+          font-size: 2rem;
+        }
+
+        .btn {
+          border: none;
+          height: 2.5rem;
+          width: 6rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          background-color: rgb(240, 240, 240);
+          font-weight: 500;
+        }
+
+        .btn:hover {
+          background-color: gray;
+          cursor: pointer;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .btn {
+            background-color: rgb(107, 107, 107);
+          }
+        }
+
+        @media (prefers-color-scheme: light) {
+          .btn {
+            background-color: rgb(240, 240, 240);
+          }
+        }
+      </style>
+      <div>
+        <p id="timerText"></p>
+        <div>
+          <button class="btn" id="startWork">Start Work</button>
+          <button class="btn" id="startBreak">Start Break</button>
+          <button class="btn" id="stopTimer">Stop Timer</button>
+        </div>
+      </div>
+    </template>
+    <script src="/template.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
